@@ -49,9 +49,9 @@ public class ElectronicStoreApplication implements CommandLineRunner {
 
 
             User adminUser = User.builder()
-                    .name("Admin")
+                    .name("admin")
                     .email("admin@gmail.com")
-                    .password(passwordEncoder.encode("admin@123"))
+                    .password(passwordEncoder.encode("admin123"))
                     .gender("Male")
                     .imageName("default.png")
                     .roles(Set.of(role_admin, role_normal))
@@ -60,12 +60,12 @@ public class ElectronicStoreApplication implements CommandLineRunner {
                     .build();
 
             User normalUser = User.builder()
-                    .name("User")
-                    .email("user@gmail.com")
-                    .password(passwordEncoder.encode("user@123"))
+                    .name("durgesh")
+                    .email("durgesh@gmail.com")
+                    .password(passwordEncoder.encode("durgesh123"))
                     .gender("Male")
                     .imageName("default.png")
-                    .roles(Set.of(role_admin, role_normal))
+                    .roles(Set.of(role_normal))
                     .userId(UUID.randomUUID().toString())
                     .about("I am Normal User")
                     .build();
